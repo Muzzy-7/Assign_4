@@ -1,0 +1,50 @@
+# Australia Map Coloring using CSP (Backtracking)
+
+states = ["WA", "NT", "Q", "SA", "NSW", "V", "T"]
+
+colors = ["Orange", "white", "Black"]
+
+neighbors = {
+    "WA": ["NT", "SA"],
+    "NT": ["WA", "SA", "Q"],
+    "Q": ["NT", "SA", "NSW"],
+    "SA": ["WA", "NT", "Q", "NSW", "V"],
+    "NSW": ["Q", "SA", "V"],
+    "V": ["SA", "NSW"],
+    "T": []
+}
+
+def is_safe(state, color, assignment):
+    for n in neighbors[state]:
+        if n in assignment and assignment[n] == color:
+            return False
+    return True
+
+def select_state(assignment):
+    for s in states:
+        if s not in assignment:
+            return s
+
+def solve_csp(assignment):
+    
+    if len(assignment) == len(states):
+        return assignment
+    
+    state = select_state(assignment)
+    
+    for color in colors:
+        if is_safe(state, color, assignment):
+            assignment[state] = color
+            
+            result = solve_csp(assignment)
+            if result:
+                return result
+            
+            assignment.pop(state)
+    
+    return None
+
+solution = solve_csp({})
+print("Australia Map Coloring Solution:\n")
+for state in states:
+    print(f"{state} -> {solution[state]}")
