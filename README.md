@@ -27,6 +27,9 @@ WA, NT, Q, SA, NSW, V, T
 * Domain: Colors
 * Constraints: Adjacency
 
+## Output
+<img width="569" height="290" alt="image" src="https://github.com/user-attachments/assets/0cce3eee-add3-4caf-8f7e-239d726ca9f7" />
+
 # 2. Map Coloring – Telangana (33 Districts)
 
 ## Problem
@@ -43,6 +46,10 @@ Assign colors to all 33 districts of Telangana such that no adjacent districts s
 * Real-world map modeling
 * Larger constraint graph
 * Demonstrates the scalability of CSP
+
+## Output
+<img width="350" height="769" alt="image" src="https://github.com/user-attachments/assets/a46d0b72-d944-4b57-9ef3-ba128f95c8ad" />
+
 
 # 3. Sudoku Solver using CSP
 
@@ -65,6 +72,10 @@ Solve a 9×9 Sudoku grid ensuring:
 ## Key Insight
 Constraint propagation reduces the exponential search space.
 
+## Output
+<img width="359" height="257" alt="image" src="https://github.com/user-attachments/assets/7d77dcd0-767a-404e-8b56-ef2d2801fca6" />
+
+
 #  4. Cryptarithmetic Puzzle
 
 ## Problem
@@ -83,31 +94,11 @@ Each letter represents a unique digit.
 * Checked validity using constraints
 
 ## Example Solution
-
 734 + 734 = 1468
 
-# Techniques Used
+## Output
+<img width="221" height="245" alt="image" src="https://github.com/user-attachments/assets/4f9c1f57-815d-45fa-af88-a7ec8a6f5c9f" />
 
-* Backtracking Search
-* Constraint Satisfaction Problem (CSP)
-* AllDiff Constraint
-* Generate-and-Test (for cryptarithmetic)
-
-# Possible Improvements
-
-* MRV (Minimum Remaining Values)
-* Forward Checking
-* Arc Consistency (AC-3)
-
-# Conclusion
-
-These problems demonstrate how CSP techniques can efficiently solve:
-
-* Graph coloring problems
-* Logical puzzles
-* Arithmetic constraints
-
-By applying constraints effectively, the search space is significantly reduced, making complex problems tractable.
 
 # Author
 
